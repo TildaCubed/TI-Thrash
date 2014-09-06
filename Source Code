@@ -1,8 +1,6 @@
-DelVar CDelVar WClrHome:0→Xmin
-Ans→Ymin:1→∆X
-Xmax>96→C:96→Xmax
-62→Ymax
-Output(4+C,4+5C,"TI-Thrash
+DelVar C0→Xmin:1→∆X
+Xmax>96→C
+ClrHome:Output(4+C,4+5C,"TI-Thrash
 If not(C:Output(4+C,13,"!
 Pause :Lbl 0:ClrHome
 Output(1,1,"TI-THRASH
@@ -18,7 +16,7 @@ Lbl 2:ClrHome:Disp "TI-THRASH IS A","FIGHTING GAME.","MOVE THE FIGHTER","LEFT an
 Pause :ClrHome
 Disp "SUPER THRASH:","HIT MATH WHEN","BAR ON RIGHT IS","FULL. HIT ENTER","TO QUIT. HIT","MODE TO BLOCK","PUNCH, and XTθN","TO DODGE KICKS.
 Pause :ClrHome
-Disp "ATTACK IN","SUCSESSION TO","PERFORM COMBOS.","A TILDA^3 PROD.","MADE BY:","123outerme","BUILD 03B.
+Disp "ATTACK IN","SUCSESSION TO","PERFORM COMBOS.","A TILDA^3 PROD.","MADE BY:","123outerme","BUILD 04B.
 Pause :ClrHome
 Goto 0
 Lbl 1:ClrHome:Output(1,1,"CHARACTER?
@@ -32,10 +30,18 @@ If Ans=92:Then:"θ"→Str0:DelVar O:End
 If X=93:Then:"0"→Str0:"U"→Str1:1→O:End
 If X=94:Then:"O"→Str0:2→O:End
 If X=82:Goto 0
-ClrDraw
-0→Xmin:1→∆X:Xmax>96→C
-96→Xmax
-ClrHome:4→B:200→U:Ans→V
+DelVar N:Lbl B:ClrHome
+Input "ROUNDS? ",θ
+If N>5:Goto B
+Lbl A
+N+1→N
+ClrHome:Disp "ROUND
+Output(1,7,N
+Output(1,8,"!
+Pause :ClrHome
+0→Xmin:1→∆X
+Xmax>96→C
+4→B:200→U:Ans→V
 For(A,2,15+10C
 Output(8,A,"-
 End
@@ -53,11 +59,13 @@ Output(2,W,"=
 End
 Repeat K
 If H<6:int(H→G:If not(G:1→G
-For(W,10,G+9:Output(1,W+10C,"≠
+Output(3,8+5C,N
+Output(3,1,"Z
+For(W,2,G+1:Output(3,W,"≠
 End
 getKey→A
 If Ans:Output(7,B," 
-If A:Output(6,B," 
+If Ans:Output(6,B," 
 min(E-1,max(2,B+sum(DeltaList(Ans={24,26→B
 Output(6,Ans,Str0
 Output(7,Ans,Str1
@@ -66,8 +74,7 @@ Output(7,E,"V
 (A=105)+(U<1)+(V<1)→K
 If (A=41)*(G>4):Then:Goto 7:Lbl 8:End
 If A=22:Then:DelVar LOutput(6,B,"X
-rand(30-14C:Output(6,B,Str0
-End
+rand(30-14C:End
 If A=32:Then:DelVar LOutput(5,B,Str0
 Output(6,B,Str1
 Output(7,B," 
@@ -76,13 +83,13 @@ End
 If A=21:Then:Goto 3:Lbl 5:End
 If A=31:Then:Goto 4:Lbl 6:End
 End
-DelVar ADelVar BDelVar CDelVar DDelVar EDelVar GDelVar HDelVar IDelVar KDelVar LDelVar SDelVar TDelVar WDelVar Str0DelVar Str1ClrHome:Goto 9
+DelVar ADelVar BDelVar DDelVar EDelVar GDelVar HDelVar IDelVar KDelVar LDelVar SDelVar TDelVar WClrHome:Goto 9
 Lbl 3:Output(6,B+1,"D
 rand(20-9C:Output(6,B+1," 
 If B=E-1:Then:randInt(1,10→D
 If Ans<9:Then
 If L=21:Then:H+1→H:V-15+5(O=2)-5(O=1)→V:Output(6,B+1,"9
-DelVar Lrand(20-9C:Else:21→L:V-10+5(O=2)-5(O=1)→V:End
+DelVar Lrand(20-9C:Else:21→L:V-10+10(O=2)-5(O=1)→V:End
 int(V/20→T:Output(2,3,"         
 For(W,2,T+1:Output(2,W,"=
 End
@@ -92,7 +99,7 @@ DelVar Lrand(20-9C
 If D=9:Then:Repeat J or I≥1:I+.1→I:getKey→J:End
 If J=22:Then:Output(6,B,"X
 rand(20-9C:Output(6,B,Str0
-Else:U-30+5(O=2)-10(O=1)→U:int(Ans/20→S
+Else:U-30-5(O=2)+10(O=1)→U:int(Ans/20→S
 Output(1,3,"         
 For(W,3,S+1
 Output(1,W,"=
@@ -105,10 +112,11 @@ End
 Goto 5
 Lbl 4:Output(7,B,")ʟ
 rand(35-13C:Output(7,B,Str1
+Output(7,B+1," 
 If B=E-1:Then:randInt(1,10→D
 If Ans<8:Then
-If L=21:Then:H+1.5→H:V-25+5(O=2)-5(O=1)→V:Output(7,B+1,">
-DelVar Lrand(20-9C:Else:V-20+5(O=2)-5(O=1)→V:31→L:End
+If L=21:Then:H+1.5→H:V-25+10(O=2)-5(O=1)→V:Output(7,B+1,">
+DelVar Lrand(20-9C:Else:V-20-10(O=2)+5(O=1)→V:31→L:End
 int(V/20→T:Output(2,3,"         
 For(W,2,T+1:Output(2,W,"=
 End
@@ -135,10 +143,8 @@ If V<1:DelVar V:Output(5,B,"
 End
 Goto 6
 Lbl 7
-Ans→H
-Output(4,B,Str0
-Output(5,B,Str1
-Output(6,B," 
+Ans→H:DelVar LOutput(4,B,Str0
+Output(5,B,Str1:Output(6,B," 
 Output(7,B,"^
 rand(35-14C:Output(7,B," 
 Output(5,E,"^
@@ -151,16 +157,17 @@ End
 Output(4,B," 
 Output(5,B," 
 Output(5,E," 
-Output(6,E-1," O 
+Output(6,E-1," Q 
 Output(7,E-1," V 
 Output(1,11+10C,"    
 Goto 8
 Lbl 9:ClrHome
-If V<1
-Output(1,1,"YOU WIN!
-If U<1
-Output(1,1,"YOU LOSE!
-If (U>0 and V>0) or (not(U) and not(V
-Output(1,1,"TIE!
+If V<1:M+1→M
+If U<1:M-1→M
+If N<θ:Goto A
+If M>int(N/2) or Mθ=1:Disp "YOU WIN!
+If M<int(N/2) or not(Mθ:Disp "YOU LOSE!
+If M=θ/2:Disp "TIE!
 Pause :ClrHome
-DelVar UDelVar VStop
+DelVar UDelVar VDelVar MDelVar NDelVar CDelVar Str0DelVar Str1
+Goto 0
