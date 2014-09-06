@@ -1,0 +1,180 @@
+DelVar CDelVar WClrHome:0→Xmin
+Ans→Ymin:1→∆X
+Xmax>96→C:96→Xmax
+62→Ymax
+Output(4+C,4+5C,"TI-Thrash
+If not(C:Output(4+C,13,"!
+Pause :ClrHome:Lbl 0:ClrDraw
+Text(0,1,"TI-THRASH
+Text(12,1,"1. START
+Text(24,1,"2. HELP
+Text(36,1,"3. QUIT
+Repeat X=94 or X=93 or X=92:getKey→X:End
+If Ans=92:Goto 1
+If X=93:Goto 2
+DelVar XClrDraw
+ClrHome:Stop
+Lbl 2:ClrDraw:Text(0,1,"TI-THRASH IS AN ARCADE-
+Text(12,1,"STYLE FIGHTING GAME.
+Text(24,1,"MOVE LEFT and RIGHT 
+Text(36,1,"USING < and >.
+Text(48,1,"PUNCH USING 2ND. KICK
+Pause :ClrDraw
+Text(0,1,"USING ALPHA.
+Text(12,1,"SUPER THRASH ATTACK:
+Text(24,1,"HIT MATH WHEN BAR ON
+Text(36,1,"RIGHT IS FULL.
+Text(48,1,"HIT ENTER TO QUIT.
+Pause :ClrDraw:Text(0,1,"HIT MODE TO BLOCK
+Text(12,1,"PUNCHES, and XTθN TO
+Text(24,1,"DODGE KICKS.
+Text(36,1,"ATTACK IN SUCSESSION
+Text(48,1,"TO PERFORM COMBOS.
+Pause :ClrDraw
+Text(0,1,"A TILDA^3 PROD.
+Text(12,1,"MADE BY 123outerme. 
+Text(24,1,"BUILD 01B.
+Pause :ClrDraw
+Goto 0
+Lbl 1:ClrDraw:Text(0,1,"CHARACTER?
+Text(12,1,"1. θ
+Text(24,1,"2. 0
+Text(36,1,"3. O
+Text(48,1,"4. BACK
+"V→Str1
+Repeat Ans=92 or Ans=93 or Ans=94 or Ans=82:getKey→X:End
+If Ans=92:Then:"θ"→Str0:DelVar O:End
+If X=93:Then:"0"→Str0:"U"→Str1:1→O:End
+If X=94:Then:"O"→Str0:2→O:End
+If X=82:Goto 0
+ClrDraw
+0→Xmin:1→∆X:Xmax>96→C
+96→Xmax
+ClrHome:4→B:200→U:Ans→V
+For(A,2,15+10C
+Output(8,A,"-
+End
+DelVar KDelVar ADelVar G1→H
+8+5C→E
+10→S
+10→T
+For(W,2,11
+Output(1,W,"=
+End
+For(W,4,13
+Output(2,W,"=
+End
+Repeat K
+If H<6:int(H→G:If not(G:1→G
+For(W,10,G+9:Output(1,W+10C,"≠
+End
+getKey→A
+If Ans:Output(7,B," 
+If A:Output(6,B," 
+min(E-1,max(2,B+sum(DeltaList(Ans={24,26→B
+Output(6,Ans,Str0
+Output(7,Ans,Str1
+Output(6,E,"O
+Output(7,E,"V
+(A=105)+(U<1)+(V<1)→K
+If (A=41)*(G>4):Then:Goto 7:Lbl 8:End
+If A=22:Then:DelVar LOutput(6,B,"X
+rand(30-14C:Output(6,B,Str0
+End
+If A=32:Then:DelVar LOutput(5,B,Str0
+Output(6,B,Str1
+Output(7,B," 
+rand(30-14C):Output(5,B," 
+End
+If A=21:Then:Goto 3:Lbl 5:End
+If A=31:Then:Goto 4:Lbl 6:End
+End
+DelVar ADelVar BDelVar CDelVar DDelVar EDelVar GDelVar HDelVar IDelVar KDelVar LDelVar SDelVar TDelVar WDelVar Str0DelVar Str1ClrHome:Goto 9
+Lbl 3:Output(6,B+1,"D
+rand(20-9C:Output(6,B+1," 
+If B=E-1:Then:randInt(1,10→D
+If Ans<9:Then
+If L=21:Then:H+1→H:V-15+5(O=2)-5(O=1)→V:Output(6,B+1,"9
+DelVar Lrand(20-9C:Else:21→L:V-10+5(O=2)-5(O=1)→V:End
+int(V/20→T:Output(2,5,"         
+For(W,5,T+3:Output(2,W,"=
+End
+End
+If D>8:Then:Output(6,B+1,"X
+DelVar Lrand(20-9C
+If D=9:Then:Repeat J or I≥1:I+.1→I:getKey→J:End
+If J=22:Then:Output(6,B,"X
+rand(20-9C:Output(6,B,Str0
+Else:U-30+5(O=2)-10(O=1)→U:int(Ans/20→S
+Output(1,3,"         
+For(W,3,S+1
+Output(1,W,"=
+End
+Output(6,B,"C
+If U<1:DelVar U
+End:End:End
+DelVar DIf V<1:DelVar V
+End
+Goto 5
+Lbl 4:Output(7,B,")ʟ
+rand(35-13C:Output(7,B,Str1
+If B=E-1:Then:randInt(1,10→D
+If Ans<8:Then
+If L=21:Then:H+1.5→H:V-25+5(O=2)-5(O=1)→V:Output(7,B+1,">
+DelVar Lrand(20-9C:Else:V-20+5(O=2)-5(O=1)→V:31→L:End
+int(V/20→T:Output(2,5,"         
+For(W,5,T+3:Output(2,W,"=
+End
+End
+If D>7:Then:Output(5,B," O
+Output(6,B+1,"V
+Output(7,B+1,"ʟ
+DelVar Lrand(20-9C
+If D>8:Then:Repeat J or I≥1:I+.1→I:getKey→J:End
+If J=32:Then:Output(5,B,Str0
+Output(6,B,Str1
+Output(7,B," 
+rand(30-14C
+Output(5,B," 
+Else:U-70+5(O=2)-10(O=1)→U:int(U/20→S:Output(1,3,"         
+For(W,3,S+1
+Output(1,W,"=
+End
+Output(7,B,"√(
+If U<1:DelVar U
+End:End:End
+DelVar D
+If V<1:DelVar V:Output(5,B,"  
+End
+Goto 6
+Lbl 7
+Ans→H
+Output(4,B,Str0
+Output(5,B,Str1
+Output(6,B," 
+Output(7,B,"^
+rand(35-14C:Output(7,B," 
+Output(5,E,"^
+Output(6,E-1,"{ }
+Output(7,E-1,"{ }
+V-80→V:Output(2,5,"         
+int(V/20→T
+For(W,5,T+3
+Output(2,W,"=
+End
+Output(4,B," 
+Output(5,B," 
+Output(5,E," 
+Output(6,E-1," O 
+Output(7,E-1," V 
+Output(1,11+10C,"    
+Goto 8
+Lbl 9:ClrHome
+If V<1
+Output(1,1,"YOU WIN!
+If U<1
+Output(1,1,"YOU LOSE!
+If (U>0 and V>0) or (not(U) and not(V
+Output(1,1,"TIE!
+Pause :ClrHome
+DelVar UDelVar VStop
