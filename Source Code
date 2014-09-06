@@ -4,43 +4,28 @@ Xmax>96→C:96→Xmax
 62→Ymax
 Output(4+C,4+5C,"TI-Thrash
 If not(C:Output(4+C,13,"!
-Pause :ClrHome:Lbl 0:ClrDraw
-Text(0,1,"TI-THRASH
-Text(12,1,"1. START
-Text(24,1,"2. HELP
-Text(36,1,"3. QUIT
+Pause :Lbl 0:ClrHome
+Output(1,1,"TI-THRASH
+Output(2,1,"1. START
+Output(3,1,"2. HELP
+Output(4,1,"3. QUIT
 Repeat X=94 or X=93 or X=92:getKey→X:End
 If Ans=92:Goto 1
 If X=93:Goto 2
 DelVar XClrDraw
 ClrHome:Stop
-Lbl 2:ClrDraw:Text(0,1,"TI-THRASH IS AN ARCADE-
-Text(12,1,"STYLE FIGHTING GAME.
-Text(24,1,"MOVE LEFT and RIGHT 
-Text(36,1,"USING < and >.
-Text(48,1,"PUNCH USING 2ND. KICK
-Pause :ClrDraw
-Text(0,1,"USING ALPHA.
-Text(12,1,"SUPER THRASH ATTACK:
-Text(24,1,"HIT MATH WHEN BAR ON
-Text(36,1,"RIGHT IS FULL.
-Text(48,1,"HIT ENTER TO QUIT.
-Pause :ClrDraw:Text(0,1,"HIT MODE TO BLOCK
-Text(12,1,"PUNCHES, and XTθN TO
-Text(24,1,"DODGE KICKS.
-Text(36,1,"ATTACK IN SUCSESSION
-Text(48,1,"TO PERFORM COMBOS.
-Pause :ClrDraw
-Text(0,1,"A TILDA^3 PROD.
-Text(12,1,"MADE BY 123outerme. 
-Text(24,1,"BUILD 01B.
-Pause :ClrDraw
+Lbl 2:ClrHome:Disp "TI-THRASH IS A","FIGHTING GAME.","MOVE THE FIGHTER","LEFT and RIGHT","USING < and >.","PUNCH USING 2ND,","KICK USING ALPHA
+Pause :ClrHome
+Disp "SUPER THRASH:","HIT MATH WHEN","BAR ON RIGHT IS","FULL. HIT ENTER","TO QUIT. HIT","MODE TO BLOCK","PUNCH, and XTθN","TO DODGE KICKS.
+Pause :ClrHome
+Disp "ATTACK IN","SUCSESSION TO","PERFORM COMBOS.","A TILDA^3 PROD.","MADE BY:","123outerme","BUILD 03B.
+Pause :ClrHome
 Goto 0
-Lbl 1:ClrDraw:Text(0,1,"CHARACTER?
-Text(12,1,"1. θ
-Text(24,1,"2. 0
-Text(36,1,"3. O
-Text(48,1,"4. BACK
+Lbl 1:ClrHome:Output(1,1,"CHARACTER?
+Output(2,1,"1. θ
+Output(3,1,"2. 0
+Output(4,1,"3. O
+Output(5,1,"4. BACK
 "V→Str1
 Repeat Ans=92 or Ans=93 or Ans=94 or Ans=82:getKey→X:End
 If Ans=92:Then:"θ"→Str0:DelVar O:End
@@ -58,10 +43,12 @@ DelVar KDelVar ADelVar G1→H
 8+5C→E
 10→S
 10→T
+Output(1,1,Str0
 For(W,2,11
 Output(1,W,"=
 End
-For(W,4,13
+Output(2,1,"Q
+For(W,2,11
 Output(2,W,"=
 End
 Repeat K
@@ -74,7 +61,7 @@ If A:Output(6,B,"
 min(E-1,max(2,B+sum(DeltaList(Ans={24,26→B
 Output(6,Ans,Str0
 Output(7,Ans,Str1
-Output(6,E,"O
+Output(6,E,"Q
 Output(7,E,"V
 (A=105)+(U<1)+(V<1)→K
 If (A=41)*(G>4):Then:Goto 7:Lbl 8:End
@@ -96,8 +83,8 @@ If B=E-1:Then:randInt(1,10→D
 If Ans<9:Then
 If L=21:Then:H+1→H:V-15+5(O=2)-5(O=1)→V:Output(6,B+1,"9
 DelVar Lrand(20-9C:Else:21→L:V-10+5(O=2)-5(O=1)→V:End
-int(V/20→T:Output(2,5,"         
-For(W,5,T+3:Output(2,W,"=
+int(V/20→T:Output(2,3,"         
+For(W,2,T+1:Output(2,W,"=
 End
 End
 If D>8:Then:Output(6,B+1,"X
@@ -122,11 +109,11 @@ If B=E-1:Then:randInt(1,10→D
 If Ans<8:Then
 If L=21:Then:H+1.5→H:V-25+5(O=2)-5(O=1)→V:Output(7,B+1,">
 DelVar Lrand(20-9C:Else:V-20+5(O=2)-5(O=1)→V:31→L:End
-int(V/20→T:Output(2,5,"         
-For(W,5,T+3:Output(2,W,"=
+int(V/20→T:Output(2,3,"         
+For(W,2,T+1:Output(2,W,"=
 End
 End
-If D>7:Then:Output(5,B," O
+If D>7:Then:Output(5,B," Q
 Output(6,B+1,"V
 Output(7,B+1,"ʟ
 DelVar Lrand(20-9C
@@ -157,10 +144,9 @@ rand(35-14C:Output(7,B,"
 Output(5,E,"^
 Output(6,E-1,"{ }
 Output(7,E-1,"{ }
-V-80→V:Output(2,5,"         
+V-80→V:Output(2,3,"         
 int(V/20→T
-For(W,5,T+3
-Output(2,W,"=
+For(W,2,T+1:Output(2,W,"=
 End
 Output(4,B," 
 Output(5,B," 
